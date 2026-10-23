@@ -1,0 +1,73 @@
+/* 动效令牌：数值全部来自参考站实测（docs/motion-spec/css-and-swiper.md、interactions.md），不凭感觉改。
+   用法：页面/组件用这里的变量与类，不要各写各的时长。 */
+:root {
+  --mo-drawer: 300ms ease-out;        /* 手机抽屉推入/收回 300ms，ease-out（实测 0.3s） */
+  --mo-overlay-in: 300ms;             /* 遮罩淡入 300ms（van-fade-in） */
+  --mo-overlay-out: 180ms;            /* 遮罩淡出约 177ms */
+  --mo-modal: 150ms ease-out;         /* 桌面登录弹窗 缩放+渐显 约 150ms */
+  --mo-hover: 200ms ease;             /* 侧栏项/顶栏按钮 hover：background 约 190-200ms */
+  --mo-hover-card: 300ms ease;        /* 游戏卡 hover / 通用 all */
+  --mo-btn-slide: 300ms ease-out;     /* .btn-slide-text */
+  --mo-fade-in: 400ms ease;           /* .fade-enter-active */
+  --mo-fade-out: 200ms ease;          /* .fade-leave-active（部分页 0.6s，默认取 0.2s） */
+  --mo-row-shift: 380ms ease-out;     /* 游戏行箭头整行平移 350-400ms */
+  --mo-float: 300ms ease;             /* 浮动客服按钮 right 过渡 300ms */
+  --mo-nav: 200ms ease;               /* .nav .nav-item all */
+  --mo-sticky: 300ms ease;            /* 吸顶显示/隐藏 */
+  --mo-marquee: 18px;                 /* 近期大赢家跑马灯 约 18px/s，linear，循环 */
+}
+
+/* 路由转场：参考站实测无转场（页面瞬时替换），因此不加 page transition。 */
+
+/* 遮罩（Vant van-fade 同款） */
+.mo-overlay { opacity: 0; transition: opacity var(--mo-overlay-out); }
+.mo-overlay.on { opacity: 1; transition-duration: var(--mo-overlay-in); }
+
+/* 左侧抽屉：translateX(-100%) → 0，300ms ease-out */
+.mo-drawer { transform: translateX(-100%); transition: transform var(--mo-drawer); will-change: transform; }
+.mo-drawer.on { transform: none; }
+
+/* 右侧钱包面板：同抽屉曲线，方向相反 */
+.mo-panel-right { transform: translateX(105%); transition: transform var(--mo-drawer); will-change: transform; }
+.mo-panel-right.on { transform: none; }
+
+/* 桌面居中弹窗：opacity 0→1 + scale 同时 150ms ease-out（非侧滑） */
+.mo-modal-enter-active, .mo-modal-leave-active { transition: opacity var(--mo-modal), transform var(--mo-modal); }
+.mo-modal-enter-from, .mo-modal-leave-to { opacity: 0; transform: scale(.92); }
+
+/* hover 过渡 */
+.mo-hover { transition: background-color var(--mo-hover), border-color var(--mo-hover), color var(--mo-hover); }
+.mo-hover-card { transition: all var(--mo-hover-card); will-change: transform; }
+
+/* 通用淡入淡出（<Transition name="fade">） */
+.fade-enter-active { transition: opacity .4s ease; }
+.fade-leave-active { transition: opacity .2s ease; }
+.fade-enter-from, .fade-leave-to { opacity: 0; }
+
+/* 游戏卡悬停预览：opacity + scale ≈350ms */
+@keyframes mo-preview-in { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: none; } }
+.mo-preview-in { animation: mo-preview-in 350ms ease both; }
+
+/* 按钮脉冲 / 渐变（常驻） */
+@keyframes mo-pulse-bg { 0%, 100% { opacity: 1; } 50% { opacity: .6; } }
+.mo-pulse { animation: mo-pulse-bg 2s ease-in-out infinite; }
+
+/* 骨架屏扫光（参考站 an-skeleton-loader：渐变背景 200% 位移） */
+@keyframes mo-shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+.mo-shimmer { background-image: linear-gradient(to right, rgba(255, 255, 255, .1), rgba(255, 255, 255, .3), rgba(255, 255, 255, .1)); background-size: 200%; animation: mo-shimmer 1.5s linear infinite; }
+
+/* 旋转（加载圈 2s linear；钱包箭头 rotate 180 → .3s） */
+@keyframes mo-spin { to { transform: rotate(360deg); } }
+.mo-spin { animation: mo-spin 2s linear infinite; }
+.mo-rotate { transition: transform .3s ease; }
+.mo-rotate.on { transform: rotate(180deg); }
+
+/* 跑马灯：向左 linear 循环；时长由内容宽度/18px 每秒算出（组件里设 --mo-marquee-dur） */
+@keyframes mo-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.mo-marquee { display: flex; width: max-content; animation: mo-marquee var(--mo-marquee-dur, 40s) linear infinite; }
+
+/* 减少动效偏好：全部降为瞬时，不改变布局 */
+@media (prefers-reduced-motion: reduce) {
+  .mo-drawer, .mo-panel-right, .mo-overlay, .mo-hover, .mo-hover-card, .mo-rotate { transition: none; }
+  .mo-pulse, .mo-shimmer, .mo-spin, .mo-marquee, .mo-preview-in { animation: none; }
+}

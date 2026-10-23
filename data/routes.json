@@ -1,0 +1,1108 @@
+[
+ {
+  "key": "home",
+  "path": "/",
+  "zh": "首页",
+  "en": "Home",
+  "group": "公共",
+  "auth": false,
+  "render": "prerender",
+  "sections": [
+   "轮播横幅",
+   "赌场 / 体育入口卡",
+   "奖池滚动数字",
+   "奖金入口卡",
+   "近期大赢家跑马灯",
+   "热门游戏列表",
+   "精选老虎机分类"
+  ],
+  "api": [
+   "GET /api/banners",
+   "GET /api/jackpot/total",
+   "GET /api/games/popular",
+   "GET /api/wins/recent"
+  ],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：左侧栏 + 内容区；横幅占满宽，入口卡 2 列，游戏网格 6 列"
+ },
+ {
+  "key": "casino",
+  "path": "/casino",
+  "zh": "赌场",
+  "en": "Casino",
+  "group": "公共",
+  "auth": false,
+  "render": "ssr",
+  "sections": [
+   "VIP 任务卡",
+   "返现卡",
+   "每日登录卡",
+   "免费旋转卡",
+   "邀请卡"
+  ],
+  "api": [
+   "GET /api/promotions/entries",
+   "GET /api/vip/summary"
+  ],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "search",
+  "path": "/casino/search2",
+  "zh": "游戏搜索",
+  "en": "Game Search",
+  "group": "公共",
+  "auth": false,
+  "render": "client",
+  "sections": [
+   "搜索框",
+   "分类标签",
+   "供应商筛选",
+   "游戏网格（虚拟列表）",
+   "分类计数"
+  ],
+  "api": [
+   "GET /api/games",
+   "GET /api/games/categories",
+   "GET /api/providers"
+  ],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：左侧筛选栏 + 右侧网格（6 到 8 列）"
+ },
+ {
+  "key": "recent",
+  "path": "/casino/recent",
+  "zh": "最近玩",
+  "en": "Recent",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "（应用内进入，直开跳回首页）"
+  ],
+  "api": [],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "favs",
+  "path": "/casino/favourites-recent",
+  "zh": "收藏与最近",
+  "en": "Favourites & Recent",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "收藏 / 最近 标签",
+   "空态",
+   "游戏网格"
+  ],
+  "api": [
+   "GET /api/me/favourites",
+   "GET /api/me/recent-games"
+  ],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "game",
+  "path": "/casino/games/demo-game",
+  "zh": "游戏详情",
+  "en": "Game Detail",
+  "group": "公共",
+  "auth": false,
+  "render": "ssr",
+  "sections": [
+   "游戏封面",
+   "开始 / 试玩按钮（占位 #）",
+   "同类推荐"
+  ],
+  "api": [
+   "GET /api/games/{slug}"
+  ],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：封面与信息左右分栏"
+ },
+ {
+  "key": "group",
+  "path": "/group/category/slots",
+  "zh": "游戏分组",
+  "en": "Game Group",
+  "group": "公共",
+  "auth": false,
+  "render": "ssr",
+  "sections": [
+   "分组标题",
+   "游戏网格"
+  ],
+  "api": [
+   "GET /api/games?group={slug}"
+  ],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "providers",
+  "path": "/providers",
+  "zh": "供应商",
+  "en": "Providers",
+  "group": "公共",
+  "auth": false,
+  "render": "ssr",
+  "sections": [
+   "供应商网格",
+   "空态"
+  ],
+  "api": [
+   "GET /api/providers"
+  ],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "sports",
+  "path": "/sports",
+  "zh": "体育",
+  "en": "Sports",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "第三方体育容器（占位）",
+   "会话启动失败提示"
+  ],
+  "api": [],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "sportspage",
+  "path": "/sports-page",
+  "zh": "体育页",
+  "en": "Sports Page",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "第三方体育容器（占位）"
+  ],
+  "api": [],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "sportsbet",
+  "path": "/sports-betting",
+  "zh": "体育投注",
+  "en": "Sports Betting",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "规则 / 记录 标签",
+   "日期条",
+   "空时间表"
+  ],
+  "api": [],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "sportsrec",
+  "path": "/sports-betting/record",
+  "zh": "体育记录",
+  "en": "Sports Record",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "日期范围",
+   "记录列表",
+   "空态"
+  ],
+  "api": [],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "promotion",
+  "path": "/promotion",
+  "zh": "活动",
+  "en": "Promotions",
+  "group": "公共",
+  "auth": false,
+  "render": "prerender",
+  "sections": [
+   "首存奖励卡（前 5 笔）",
+   "每日返水",
+   "免费旋转",
+   "分享奖励"
+  ],
+  "api": [
+   "GET /api/promotions"
+  ],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "bonus",
+  "path": "/bonus",
+  "zh": "奖金",
+  "en": "Bonus",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "详情 / 兑换 标签",
+   "活动卡片列表"
+  ],
+  "api": [
+   "GET /api/me/bonuses"
+  ],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "bonusdet",
+  "path": "/bonus/details",
+  "zh": "奖金详情",
+  "en": "Bonus Details",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "活动详情",
+   "准备中占位"
+  ],
+  "api": [
+   "GET /api/promotions/{id}"
+  ],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "vip",
+  "path": "/vip",
+  "zh": "VIP",
+  "en": "VIP",
+  "group": "公共",
+  "auth": false,
+  "render": "prerender",
+  "sections": [
+   "等级标签（5 档）",
+   "EXP 进度条",
+   "等级奖励",
+   "每月福利",
+   "常见问题"
+  ],
+  "api": [
+   "GET /api/vip/levels",
+   "GET /api/me/vip"
+  ],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "jackpot",
+  "path": "/jackpot",
+  "zh": "奖池",
+  "en": "Jackpot",
+  "group": "公共",
+  "auth": false,
+  "render": "client",
+  "sections": [
+   "奖池金额滚动",
+   "排行榜",
+   "中奖播报"
+  ],
+  "api": [
+   "GET /api/jackpot",
+   "GET /api/jackpot/ranking"
+  ],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "jpdetail",
+  "path": "/jackpot/detail",
+  "zh": "奖池详情",
+  "en": "Jackpot Detail",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "（应用内进入，直开跳回首页）"
+  ],
+  "api": [],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "jpshare",
+  "path": "/jackpot/share",
+  "zh": "奖池分享",
+  "en": "Jackpot Share",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "（应用内进入，直开跳回首页）"
+  ],
+  "api": [],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "jpmine",
+  "path": "/jackpot/mybouns",
+  "zh": "我的奖池奖金",
+  "en": "My Jackpot Bonus",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "（应用内进入，直开跳回首页）"
+  ],
+  "api": [],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "jpinv",
+  "path": "/jackpot-invited",
+  "zh": "奖池邀请页",
+  "en": "Jackpot Invited",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "今日幸运赢家",
+   "分享"
+  ],
+  "api": [],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "jpatt",
+  "path": "/jackpot-attached",
+  "zh": "奖池附加页",
+  "en": "Jackpot Attached",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "今日幸运赢家",
+   "分享"
+  ],
+  "api": [],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "freespin",
+  "path": "/freeSpin",
+  "zh": "免费旋转",
+  "en": "Free Spin",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "（应用内进入，直开跳回首页）"
+  ],
+  "api": [],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "login",
+  "path": "/login",
+  "zh": "登录",
+  "en": "Sign In",
+  "group": "认证",
+  "auth": false,
+  "render": "client",
+  "sections": [
+   "手机 / 邮箱 标签",
+   "区号选择",
+   "密码",
+   "第三方登录按钮（占位）"
+  ],
+  "api": [
+   "POST /api/auth/login"
+  ],
+  "states": [
+   "校验错误",
+   "提交中",
+   "提交失败"
+  ],
+  "desktop": "桌面：居中卡片（宽 420）"
+ },
+ {
+  "key": "register",
+  "path": "/register",
+  "zh": "注册",
+  "en": "Register",
+  "group": "认证",
+  "auth": false,
+  "render": "client",
+  "sections": [
+   "手机号",
+   "密码",
+   "推荐码（选填）",
+   "条款与年龄勾选",
+   "滑块验证（占位）"
+  ],
+  "api": [
+   "POST /api/auth/register"
+  ],
+  "states": [
+   "校验错误",
+   "提交中",
+   "提交失败"
+  ],
+  "desktop": "桌面：居中卡片（宽 420）"
+ },
+ {
+  "key": "forgot",
+  "path": "/forgot",
+  "zh": "忘记密码",
+  "en": "Forgot Password",
+  "group": "认证",
+  "auth": false,
+  "render": "client",
+  "sections": [
+   "邮箱或手机",
+   "重设密码"
+  ],
+  "api": [
+   "POST /api/auth/forgot"
+  ],
+  "states": [
+   "校验错误",
+   "提交中",
+   "提交失败"
+  ],
+  "desktop": "桌面：居中卡片（宽 420）"
+ },
+ {
+  "key": "terms",
+  "path": "/terms-and-conditions",
+  "zh": "服务条款",
+  "en": "Terms",
+  "group": "公共",
+  "auth": false,
+  "render": "prerender",
+  "sections": [
+   "自写正文（占位）"
+  ],
+  "api": [],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "privacy",
+  "path": "/privacy-policy",
+  "zh": "隐私政策",
+  "en": "Privacy",
+  "group": "公共",
+  "auth": false,
+  "render": "prerender",
+  "sections": [
+   "自写正文（占位）"
+  ],
+  "api": [],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "sitemap",
+  "path": "/site-map",
+  "zh": "站点地图",
+  "en": "Site Map",
+  "group": "公共",
+  "auth": false,
+  "render": "prerender",
+  "sections": [
+   "核心页面索引"
+  ],
+  "api": [],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "refer",
+  "path": "/refer-earn",
+  "zh": "推荐赚钱",
+  "en": "Refer & Earn",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "我的数据",
+   "直推数据",
+   "可领奖金",
+   "等级"
+  ],
+  "api": [
+   "GET /api/me/referral"
+  ],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "referlock",
+  "path": "/refer-earn-lock-bonus",
+  "zh": "锁定奖金",
+  "en": "Locked Bonus",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "锁定奖金金额",
+   "规则说明"
+  ],
+  "api": [],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "refercalc",
+  "path": "/refer-earn-calc",
+  "zh": "奖励计算器",
+  "en": "Reward Calculator",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "代理等级",
+   "好友币种",
+   "存款额",
+   "游戏类别",
+   "投注额",
+   "预期奖金"
+  ],
+  "api": [
+   "GET /api/referral/config"
+  ],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "notices",
+  "path": "/notifications",
+  "zh": "通知",
+  "en": "Notifications",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "通知列表",
+   "空态"
+  ],
+  "api": [
+   "GET /api/me/notifications"
+  ],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "user",
+  "path": "/user",
+  "zh": "个人中心",
+  "en": "Account",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "头像与 ID",
+   "EXP 进度",
+   "入口宫格",
+   "统计",
+   "常玩游戏",
+   "收藏夹"
+  ],
+  "api": [
+   "GET /api/me",
+   "GET /api/me/stats"
+  ],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：左侧账户菜单 + 右侧内容"
+ },
+ {
+  "key": "avatar",
+  "path": "/edit-avater",
+  "zh": "修改头像",
+  "en": "Edit Avatar",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "头像选择",
+   "提交"
+  ],
+  "api": [],
+  "states": [
+   "校验错误",
+   "提交中",
+   "提交失败"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "password",
+  "path": "/update-password",
+  "zh": "修改密码",
+  "en": "Change Password",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "旧密码",
+   "新密码",
+   "确认密码"
+  ],
+  "api": [
+   "POST /api/me/password"
+  ],
+  "states": [
+   "校验错误",
+   "提交中",
+   "提交失败"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "verify",
+  "path": "/verify",
+  "zh": "验证",
+  "en": "Verify",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "邮箱验证状态",
+   "手机验证状态"
+  ],
+  "api": [],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "kyc",
+  "path": "/kyc",
+  "zh": "实名认证",
+  "en": "KYC",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "姓名",
+   "生日",
+   "国家",
+   "证件"
+  ],
+  "api": [
+   "POST /api/me/kyc"
+  ],
+  "states": [
+   "校验错误",
+   "提交中",
+   "提交失败"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "bets",
+  "path": "/bets",
+  "zh": "投注记录",
+  "en": "Bets",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "赌场 / 体育 标签",
+   "日期范围",
+   "空态"
+  ],
+  "api": [
+   "GET /api/me/bets"
+  ],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "blacklist",
+  "path": "/blacklist",
+  "zh": "黑名单",
+  "en": "Blacklist",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "列表",
+   "空态"
+  ],
+  "api": [],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "sessions",
+  "path": "/sessions",
+  "zh": "登录设备",
+  "en": "Sessions",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "全部 / 进行中 / 不活跃",
+   "设备列表"
+  ],
+  "api": [
+   "GET /api/me/sessions"
+  ],
+  "states": [
+   "校验错误",
+   "提交中",
+   "提交失败"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "prefs",
+  "path": "/preferences",
+  "zh": "偏好设置",
+  "en": "Preferences",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "隐身模式",
+   "其他开关"
+  ],
+  "api": [
+   "GET /api/me/preferences",
+   "PUT /api/me/preferences"
+  ],
+  "states": [
+   "校验错误",
+   "提交中",
+   "提交失败"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "chip",
+  "path": "/chip-currency",
+  "zh": "筹码币种",
+  "en": "Chip Currency",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "当前币种",
+   "重置"
+  ],
+  "api": [
+   "GET /api/currencies",
+   "PUT /api/me/currency"
+  ],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "depsubmit",
+  "path": "/wallet-deposit-submit",
+  "zh": "存款提交",
+  "en": "Deposit Submit",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "步骤 1：收款信息",
+   "步骤 2：上传凭证"
+  ],
+  "api": [
+   "POST /api/deposits/{id}/proof"
+  ],
+  "states": [
+   "校验错误",
+   "提交中",
+   "提交失败"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "chat",
+  "path": "/chat",
+  "zh": "客服",
+  "en": "Support",
+  "group": "公共",
+  "auth": false,
+  "render": "client",
+  "sections": [
+   "客服入口（占位）"
+  ],
+  "api": [],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "deposit",
+  "path": "/deposit",
+  "zh": "存款",
+  "en": "Deposit",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "币种选择",
+   "支付方式",
+   "金额与快捷金额",
+   "提交"
+  ],
+  "api": [
+   "GET /api/payment/methods",
+   "POST /api/deposits"
+  ],
+  "states": [
+   "校验错误",
+   "提交中",
+   "提交失败"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "withdraw",
+  "path": "/withdraw",
+  "zh": "提款",
+  "en": "Withdraw",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "币种选择",
+   "收款账户",
+   "金额与手续费",
+   "提交"
+  ],
+  "api": [
+   "POST /api/withdrawals"
+  ],
+  "states": [
+   "校验错误",
+   "提交中",
+   "提交失败"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "walletrec",
+  "path": "/wallet/records",
+  "zh": "资金记录",
+  "en": "Wallet Records",
+  "group": "会员",
+  "auth": true,
+  "render": "client",
+  "sections": [
+   "存款 / 提款 标签",
+   "状态筛选",
+   "记录列表（时间线）",
+   "空态"
+  ],
+  "api": [
+   "GET /api/me/transactions"
+  ],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "language",
+  "path": "/language",
+  "zh": "选择语言",
+  "en": "Language",
+  "group": "公共",
+  "auth": false,
+  "render": "client",
+  "sections": [
+   "语言列表（中文、English）"
+  ],
+  "api": [],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ },
+ {
+  "key": "notfound",
+  "path": "/404",
+  "zh": "页面不存在",
+  "en": "Not Found",
+  "group": "公共",
+  "auth": false,
+  "render": "ssr",
+  "sections": [
+   "404 提示",
+   "返回首页按钮"
+  ],
+  "api": [],
+  "states": [
+   "加载骨架",
+   "空态",
+   "错误重试"
+  ],
+  "desktop": "桌面：内容区最大宽 1200，区块 2 列网格"
+ }
+]

@@ -1,0 +1,60 @@
+@import './motion.css';
+
+/* 设计令牌：与 Nuxt 版 main.css 相同。品牌色只在这里改（config/brand.ts 同步）。 */
+:root {
+  /* 配色取自参考站实测（docs/research/vp/COLORS.md）：手机是 Vant 体系，桌面是 Tailwind 体系，两套绿略有不同 */
+  --vp-primary: #5afa68;
+  --vp-primary-2: #5effac;
+  --vp-on-primary: #1a1a22;
+  --vp-grad: linear-gradient(#5effac 0%, #5afa68 100%);
+  /* 大按钮（登录/提交）：参考站桌面与手机相同 */
+  --vp-grad-btn: linear-gradient(rgb(94, 255, 172) -0.62%, rgb(90, 250, 104) 99.38%);
+  --vp-on-btn: #1a1a21;
+  --vp-bg: #1a1a22;
+  --vp-card: #26262d;
+  --vp-text: #fff;
+  --vp-muted: rgba(255, 255, 255, 0.6);
+  --vp-border: rgba(255, 255, 255, 0.08);
+  --vp-danger: #f83a5c;
+  --vp-font: var(--font-figtree), proxima-nova, 'PingFang SC', 'Noto Sans SC', Arial, sans-serif;
+  /* 图片上的文字：浅白带一点灰 + 柔和阴影，不用纯白（太硬）；副文字再灰一档 */
+  --vp-glow: 0 0 18px rgba(90, 250, 104, .45);
+  --vp-glow-hover: 0 0 26px rgba(90, 250, 104, .65);
+  --vp-text-img: #f1f1f3;
+  --vp-text-img-2: #c4c8cd;
+  --vp-text-img-shadow: 0 1px 8px rgba(0, 0, 0, .55);
+  /* 冰晶霓虹（Frozen Neon Luxe）：选中态荧光用。mint 只给选中/强调，rgb 三元组方便写 rgba(var(--fx-mint-rgb), .3) */
+  --fx-mint: #39ffb6;
+  --fx-mint-rgb: 57, 255, 182;
+  --fx-ice: #9af5e1;
+  --fx-gold: #ffd166;
+  --fx-icon: rgba(255, 255, 255, 0.62);
+  --fx-cut: #071a1d; /* 实心图标内部刻线的颜色 */
+}
+@media (min-width: 768px) {
+  :root {
+    --vp-primary: #05f26a;
+    --vp-on-primary: #000;
+    --vp-grad: linear-gradient(to top, #05f26a 0%, #5effac 100%);
+    --vp-bg: #1a1a1b;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--vp-bg); color: var(--vp-text); font-family: var(--vp-font); }
+a { color: inherit; }
+button { font-family: inherit; }
+
+/* 参考站整页不显示滚动条（仍可滚动） */
+html { scrollbar-width: none; -ms-overflow-style: none; }
+html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; }
+
+/* 面板 / 抽屉 / 弹窗里的滚动条一律隐藏（页面本身的滚动条保留）；仍可滚动 */
+*:not(html):not(body) { scrollbar-width: none; -ms-overflow-style: none; }
+*:not(html):not(body)::-webkit-scrollbar { display: none; width: 0; height: 0; }
+
+/* 主操作按钮（品牌绿渐变底）：淡绿外发光，靠近/聚焦时更亮；只设 box-shadow，不影响各按钮自己的尺寸与颜色 */
+.cta-g, .m-btn, .m-mdep, .wb-submit.on, .bd-cta, .mf-login, .re-reg, .rc-btn, .pv-btn--main, .pr-deposit, .iv-cta, .jgs-btn--main, .js-sb, .d-btn.solid, .fr-btn,
+.layout_topbar__solid, .not_found__nf-btn { box-shadow: var(--vp-glow); transition: box-shadow .2s ease, transform .15s ease; }
+.cta-g:hover, .m-btn:hover, .m-mdep:hover, .wb-submit.on:hover, .bd-cta:hover, .mf-login:hover, .re-reg:hover, .rc-btn:hover, .pv-btn--main:hover, .pr-deposit:hover, .iv-cta:hover, .jgs-btn--main:hover, .js-sb:hover, .d-btn.solid:hover, .fr-btn:hover,
+.layout_topbar__solid:hover, .not_found__nf-btn:hover { box-shadow: var(--vp-glow-hover); }
+@media (prefers-reduced-motion: reduce) { .cta-g, .m-btn { transition: none; } }

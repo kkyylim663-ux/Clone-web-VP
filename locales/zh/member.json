@@ -1,0 +1,165 @@
+{
+  "member": {
+    "frame": { "back": "返回", "close": "关闭", "gate": "此页需要登录", "login": "去登录" },
+    "common": { "loading": "加载中", "submit": "提交", "submitting": "提交中…", "save": "保存", "saving": "保存中…", "emptyTitle": "暂无数据" },
+    "toast": { "saved": "已保存", "submitted": "已提交，等待审核" },
+    "time": { "now": "刚刚", "minutes": "{n} 分钟前", "hours": "{n} 小时前", "days": "{n} 天前" },
+    "err": {
+      "required": "请填写此项",
+      "phone": "请输入正确的手机号（6–13 位数字）",
+      "email": "请输入正确的邮箱",
+      "postal": "邮编为 4–10 位数字",
+      "idNumber": "证件号为 6–20 位字母或数字",
+      "dob": "请输入有效出生日期（须年满 18 岁）",
+      "idType": "请选择证件类型",
+      "amountFormat": "金额格式不正确（最多两位小数）",
+      "amountMin": "金额不能低于 {min}",
+      "amountMax": "金额不能高于 {max}",
+      "address": "地址长度需为 10–100 个字符",
+      "txid": "交易哈希至少 10 位",
+      "name": "付款人姓名至少 2 个字",
+      "password": "新密码至少 8 位，且包含字母和数字",
+      "same": "新密码不能与旧密码相同",
+      "confirm": "两次输入的新密码不一致",
+      "wrongPassword": "旧密码错误",
+      "fileType": "仅支持 png、jpg、pdf 文件",
+      "fileSize": "文件不能超过 5MB",
+      "avatar": "请选择一个头像",
+      "dateRange": "日期范围不正确（起不晚于止，最多 31 天）",
+      "invalid": "提交内容有误，请检查",
+      "insufficient": "余额不足",
+      "generic": "操作失败，请稍后重试"
+    },
+    "personal": { "title": "个人", "profile": "个人资料", "edit": "编辑", "email": "邮箱", "emailDesc": "验证你的邮箱地址有效且你可访问。", "verified": "已验证", "phone": "手机", "phoneDesc": "验证手机号后，可将手机作为第二登录方式。", "notBound": "未绑定", "add": "添加", "logout": "退出登录" },
+    "user": {
+      "title": "个人中心",
+      "exp": "经验 {exp}/{next}",
+      "need": "还差 {n} 经验升至 V{lv}",
+      "menu": { "account": "账户", "security": "安全", "kyc": "实名认证", "bets": "投注记录", "sessions": "登录设备", "ignored": "黑名单", "preferences": "偏好设置" },
+      "stats": { "title": "统计", "wins": "累计赢取 (MYR)", "bets": "累计投注 (MYR)", "turnover": "累计流水 (MYR)" },
+      "played": "常玩游戏",
+      "favourites": "收藏"
+    },
+    "kyc": {
+      "title": "实名认证",
+      "noItems": "暂无认证项",
+      "submit": "提交",
+      "idType": { "nric": "身份证", "passport": "护照", "driver": "驾照" },
+      "l1": {
+        "title": "一级认证",
+        "desc": "请填写与证件一致的个人资料。",
+        "tip": "您的资料将加密存储，仅用于身份核验。",
+        "pickType": "请选择",
+        "f": {
+          "firstName": "名", "lastName": "姓", "dob": "出生日期", "country": "国家", "city": "城市",
+          "postal": "邮编", "address": "居住地址", "phone": "手机号", "email": "邮箱",
+          "idType": "证件类型", "idNumber": "证件号码", "idValid": "证件有效期（起）", "idValidTo": "证件有效期（止）"
+        }
+      },
+      "l2": {
+        "title": "二级认证",
+        "locked": "请先完成一级认证，二级认证将解锁。",
+        "req": "请上传证件正反面（png/jpg/pdf，≤5MB）。",
+        "idType": "证件类型",
+        "front": "证件正面",
+        "back": "证件反面",
+        "hint": "文件仅记录文件名（演示），不会真正上传。"
+      }
+    },
+    "password": {
+      "title": "修改密码",
+      "noItems": "暂无内容",
+      "heading": "修改登录密码",
+      "old": "旧密码",
+      "new": "新密码",
+      "confirm": "确认新密码",
+      "rule": "新密码至少 8 位，且包含字母和数字。",
+      "submit": "提交"
+    },
+    "prefs": {
+      "title": "偏好设置",
+      "noItems": "暂无设置项",
+      "group": { "privacy": "隐私", "community": "社区", "marketing": "营销" },
+      "item": { "ghost": "开启隐身模式", "hideStats": "隐藏所有统计", "hideGames": "隐藏所有游戏", "hideProfile": "隐藏个人资料", "excludeRain": "不参与红包雨", "email": "接收邮件营销" },
+      "hint": "设置最多 30 秒生效。",
+      "gdesc": { "privacy": "控制他人能看到的个人信息与统计。" },
+      "desc": { "ghost": "开启后他人无法看到你的在线状态。", "hideStats": "隐藏个人页面上的全部统计数据。", "hideGames": "隐藏个人页面上的游戏记录。", "hideProfile": "隐藏昵称以外的个人资料。", "excludeRain": "参与红包雨活动时不接收红包。", "email": "接收站内营销邮件与活动通知。" }
+    },
+    "chip": {
+      "title": "筹码与货币",
+      "heading": "当前筹码与奖励货币",
+      "noItems": "暂无可选货币",
+      "current": "当前币种",
+      "note": "游戏筹码默认使用此币种；活动奖励以奖励币种发放。",
+      "reset": "重置为 {c}"
+    },
+    "avatar": {
+      "title": "编辑头像",
+      "heading": "默认头像",
+      "noItems": "暂无可选头像",
+      "noItemsHint": "稍后再来看看"
+    },
+    "sessions": {
+      "title": "登录设备",
+      "noItems": "暂无设备",
+      "end": "没有更多数据",
+      "tab": { "all": "全部", "active": "在线", "inactive": "已下线" },
+      "status": { "current": "当前设备", "removed": "已下线" },
+      "justNow": "刚刚"
+    },
+    "blacklist": {
+      "title": "黑名单",
+      "noItems": "暂无数据",
+      "remove": "移除",
+      "removed": "已移出黑名单"
+    },
+    "bets": {
+      "title": "投注记录",
+      "tab": { "casino": "赌场", "sports": "体育" },
+      "from": "开始日期",
+      "to": "结束日期",
+      "side": ["账户", "投注记录", "通知", "实名认证", "登录设备", "偏好设置"]
+    },
+    "notify": { "title": "通知", "noItems": "暂无通知" },
+    "wallet": {
+      "title": { "deposit": "存款", "withdraw": "提款", "records": "记录" },
+      "noMethods": "暂无可用支付方式", "noMethodsHint": "请稍后再试", "emptyRecords": "暂无记录",
+      "tab": { "deposit": "存款", "withdraw": "提款" },
+      "records": "记录",
+      "currency": "币种",
+      "network": "网络",
+      "amount": "金额",
+      "amountPh": "请输入金额",
+      "address": "收款地址",
+      "addressPh": "请输入提现地址",
+      "bonusNone": "本次存款无奖励",
+      "bonusPick": "选择奖金，额外获得奖励",
+      "bonusTier": "第 {n} 笔存款：+{pct}%",
+      "bonusMinN": "最低存款 MYR {min} · 流水 x{x}",
+      "bonusTitle": "存款奖金",
+      "bonusFtd": "首存享 50%",
+      "bonusMin": "最低存款 MYR 10.00",
+      "bonusMore": "更多 3 项",
+      "submit": { "deposit": "确认存款", "withdraw": "确认提款" },
+      "submitting": "提交中…",
+      "resultOk": "提交成功，等待处理",
+      "resultBad": "提交失败，请稍后重试",
+      "kind": { "deposit": "存款", "withdraw": "提款" },
+      "status": { "success": "成功", "pending": "处理中", "failed": "失败" }
+    },
+    "depositSubmit": {
+      "title": "提交存款",
+      "step1": "第一步：选择币种与网络",
+      "step2": "第二步：收款信息",
+      "step3": "第三步：填写转账信息",
+      "tip": "请使用所选网络转账，到账后可在记录中查看。",
+      "qr": "二维码（占位）",
+      "addrHint": "收款地址由后端下发（占位，未接入）",
+      "amount": "金额",
+      "txid": "交易哈希",
+      "payer": "付款人姓名",
+      "remark": "备注（可选）",
+      "submit": "提交"
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "browse": {
+    "all": "全部",
+    "more": "更多",
+    "back": "返回",
+    "cancel": "取消",
+    "retry": "重试",
+    "demo": "试玩",
+    "play": "开始",
+    "loadMore": "加载更多",
+    "noMore": "没有更多了",
+    "empty": "暂无数据",
+    "error": "加载失败，请重试",
+    "bannerFallback": "敬请期待",
+    "register": "立即注册",
+    "bannerCta": "立即查看",
+    "heroLine1": "注册即可获得高达",
+    "heroAmount": "MYR 2,000,000.00",
+    "heroLine3": "赌场或体育皆可使用",
+    "deposit": "存款",
+    "turnover": "流水 {done} / {required}",
+    "withdraw": "提现",
+    "vip": "VIP {level}",
+    "online": "在线 {n}",
+    "home": {
+      "entrySports": "体育",
+      "entryBonus": "奖金中心",
+      "recentTitle": "近期大赢家",
+      "hotTitle": "热门游戏",
+      "featTitle": "精选老虎机",
+      "fullVip": "VIP 俱乐部",
+      "fullRefer": "推荐赚佣金",
+      "entryCasino": "赌场",
+      "entryJackpot": "空投奖池",
+      "entryBonusShort": "奖金",
+      "casinoSub": "{n}+ 款游戏",
+      "sportsSub": "更优赔率",
+      "airdropAmt": "MYR {amt}",
+      "bonusTag": "返现",
+      "bonusMini": "立即解锁返现与奖金！",
+      "bonusSub": "每日返现，无需申请",
+      "bonusSub2": "奖金自动发放到钱包"
+    },
+    "casino": {
+      "lobbyTitle": "游戏大厅",
+      "recent": "最近",
+      "searchPh": "搜索游戏 / 供应商",
+      "jackpot": "奖池",
+      "jackpotBtn": "查看奖池",
+      "memberBalance": "会员余额",
+      "providersTitle": "供应商",
+      "tag": "热门推荐",
+      "popular": "热门"
+    },
+    "search": {
+      "placeholder": "搜索游戏 / 供应商",
+      "count": "共 {n} 款",
+      "noResult": "无结果",
+      "noResultHint": "换个关键词试试"
+    },
+    "group": { "popular": "热门", "reset": "重置", "confirm": "确认",
+      "title": "分组",
+      "providers": "供应商",
+      "search": "搜索游戏",
+      "emptyTitle": "暂无游戏",
+      "emptyHint": "换个分类试试"
+    },
+    "providers": {
+      "title": "供应商",
+      "end": "没有更多数据",
+      "emptyTitle": "暂无供应商",
+      "emptyHint": "稍后再来看看"
+    },
+    "gameList": {
+      "title": "全部游戏"
+    },
+    "game": {
+      "start": "开始游戏",
+      "related": "相关游戏",
+      "notFound": "游戏不存在",
+      "notFoundHint": "请返回重新选择",
+      "launching": "游戏启动中（演示）",
+      "fav": "收藏",
+      "unfav": "取消收藏",
+      "favAdded": "已收藏",
+      "favRemoved": "已取消收藏"
+    },
+    "fav": {
+      "tabFav": "收藏",
+      "tabRecent": "最近玩",
+      "gateTitle": "登录后查看收藏与最近玩",
+      "gateHint": "收藏和玩过的游戏会保存在你的账户里",
+      "login": "登录",
+      "emptyFav": "暂无收藏",
+      "emptyFavHint": "在游戏详情里点收藏即可添加",
+      "emptyRecent": "暂无记录",
+      "emptyRecentHint": "玩过的游戏会出现在这里",
+      "browse": "去赌场看看"
+    }
+  }
+}

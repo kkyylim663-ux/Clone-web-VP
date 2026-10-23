@@ -1,0 +1,101 @@
+{
+  "browse": {
+    "all": "All",
+    "more": "More",
+    "back": "Back",
+    "cancel": "Cancel",
+    "retry": "Retry",
+    "demo": "Demo",
+    "play": "Play",
+    "loadMore": "Load more",
+    "noMore": "No more",
+    "empty": "No data",
+    "error": "Failed to load. Please retry.",
+    "bannerFallback": "Coming soon",
+    "register": "Sign up now",
+    "bannerCta": "View now",
+    "heroLine1": "Register & Get Up to",
+    "heroAmount": "MYR 2,000,000.00",
+    "heroLine3": "In Casino or Sports",
+    "deposit": "Deposit",
+    "turnover": "Turnover {done} / {required}",
+    "withdraw": "Withdraw",
+    "vip": "VIP {level}",
+    "online": "Online {n}",
+    "home": {
+      "entrySports": "Sports",
+      "entryBonus": "Bonus hub",
+      "recentTitle": "Recent big wins",
+      "hotTitle": "Popular games",
+      "featTitle": "Featured slots",
+      "fullVip": "VIP Club",
+      "fullRefer": "Refer & earn",
+      "entryCasino": "Casino",
+      "entryJackpot": "Airdrop Jackpot",
+      "entryBonusShort": "Bonus",
+      "casinoSub": "{n}+ Games",
+      "sportsSub": "Better odds",
+      "airdropAmt": "MYR {amt}",
+      "bonusTag": "Cashback",
+      "bonusMini": "Unlock Cashback & Bonus Now!",
+      "bonusSub": "Daily cashback, no application",
+      "bonusSub2": "Bonuses paid to your wallet"
+    },
+    "casino": {
+      "lobbyTitle": "Game lobby",
+      "recent": "Recent",
+      "searchPh": "Search games / providers",
+      "jackpot": "Jackpot",
+      "jackpotBtn": "View jackpot",
+      "memberBalance": "Member balance",
+      "providersTitle": "Providers",
+      "tag": "Featured",
+      "popular": "Popular"
+    },
+    "search": {
+      "placeholder": "Search games / providers",
+      "count": "{n} games",
+      "noResult": "No results",
+      "noResultHint": "Try another keyword"
+    },
+    "group": { "popular": "Popular", "reset": "Reset", "confirm": "Confirm",
+      "title": "Group",
+      "providers": "Providers",
+      "search": "Search games",
+      "emptyTitle": "No games",
+      "emptyHint": "Try another category"
+    },
+    "providers": {
+      "title": "Providers",
+      "end": "No more data",
+      "emptyTitle": "No providers",
+      "emptyHint": "Check back later"
+    },
+    "gameList": {
+      "title": "All games"
+    },
+    "game": {
+      "start": "Play now",
+      "related": "Related games",
+      "notFound": "Game not found",
+      "notFoundHint": "Go back and pick another game",
+      "launching": "Launching game (demo)",
+      "fav": "Favourite",
+      "unfav": "Unfavourite",
+      "favAdded": "Added to favourites",
+      "favRemoved": "Removed from favourites"
+    },
+    "fav": {
+      "tabFav": "Favourites",
+      "tabRecent": "Recently played",
+      "gateTitle": "Log in to see favourites and recent games",
+      "gateHint": "Games you favourite or play are saved to your account",
+      "login": "Log in",
+      "emptyFav": "No favourites yet",
+      "emptyFavHint": "Tap favourite on a game to add it",
+      "emptyRecent": "No history yet",
+      "emptyRecentHint": "Games you play will show up here",
+      "browse": "Browse casino"
+    }
+  }
+}

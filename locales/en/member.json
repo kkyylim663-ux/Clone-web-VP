@@ -1,0 +1,165 @@
+{
+  "member": {
+    "frame": { "back": "Back", "close": "Close", "gate": "Please sign in to view this page", "login": "Sign in" },
+    "common": { "loading": "Loading", "submit": "Submit", "submitting": "Submitting…", "save": "Save", "saving": "Saving…", "emptyTitle": "No data yet" },
+    "toast": { "saved": "Saved", "submitted": "Submitted, pending review" },
+    "time": { "now": "Just now", "minutes": "{n} min ago", "hours": "{n} h ago", "days": "{n} d ago" },
+    "err": {
+      "required": "This field is required",
+      "phone": "Enter a valid phone number (6–13 digits)",
+      "email": "Enter a valid email address",
+      "postal": "Postal code must be 4–10 digits",
+      "idNumber": "ID number must be 6–20 letters or digits",
+      "dob": "Enter a valid date of birth (must be 18 or older)",
+      "idType": "Select an ID type",
+      "amountFormat": "Invalid amount (up to two decimals)",
+      "amountMin": "Amount cannot be below {min}",
+      "amountMax": "Amount cannot be above {max}",
+      "address": "Address must be 10–100 characters",
+      "txid": "Transaction hash must be at least 10 characters",
+      "name": "Payer name must be at least 2 characters",
+      "password": "New password needs at least 8 characters, with letters and digits",
+      "same": "New password must differ from the old one",
+      "confirm": "The new passwords do not match",
+      "wrongPassword": "Old password is incorrect",
+      "fileType": "Only png, jpg or pdf files are allowed",
+      "fileSize": "File must be 5MB or smaller",
+      "avatar": "Please choose an avatar",
+      "dateRange": "Invalid date range (start not after end, max 31 days)",
+      "invalid": "Please check the submitted details",
+      "insufficient": "Insufficient balance",
+      "generic": "Something went wrong, please try again"
+    },
+    "personal": { "title": "Personal", "profile": "Profile info", "edit": "Edit", "email": "Email", "emailDesc": "Verify your email address is valid and accessible by you.", "verified": "Verified", "phone": "Phone", "phoneDesc": "Verify your phone number and you can use the phone as your second login method.", "notBound": "Not Bound", "add": "Add", "logout": "Logout" },
+    "user": {
+      "title": "Member Center",
+      "exp": "EXP {exp}/{next}",
+      "need": "Need {n} EXP more to V{lv}",
+      "menu": { "account": "Account", "security": "Security", "kyc": "KYC", "bets": "Bets", "sessions": "Sessions", "ignored": "Ignored Users", "preferences": "Preferences" },
+      "stats": { "title": "Statistics", "wins": "Total Wins (MYR)", "bets": "Total Bets (MYR)", "turnover": "Total Turnover (MYR)" },
+      "played": "Most Played Games",
+      "favourites": "Favourites"
+    },
+    "kyc": {
+      "title": "KYC",
+      "noItems": "No verification items",
+      "submit": "Submit",
+      "idType": { "nric": "National ID", "passport": "Passport", "driver": "Driver License" },
+      "l1": {
+        "title": "Level 1",
+        "desc": "Enter your personal details exactly as shown on your ID.",
+        "tip": "Your details are stored encrypted and used only for identity checks.",
+        "pickType": "Select",
+        "f": {
+          "firstName": "First Name", "lastName": "Last Name", "dob": "Date of Birth", "country": "Country", "city": "City",
+          "postal": "Postal Code", "address": "Residential Address", "phone": "Phone", "email": "Email",
+          "idType": "ID Card", "idNumber": "ID Number", "idValid": "ID Valid Time (from)", "idValidTo": "ID Valid Time (to)"
+        }
+      },
+      "l2": {
+        "title": "Level 2",
+        "locked": "Complete Level 1 first to unlock Level 2.",
+        "req": "Upload the front and back of your ID (png/jpg/pdf, up to 5MB).",
+        "idType": "ID Type",
+        "front": "Proof of Identity (front)",
+        "back": "Proof of Identity (back)",
+        "hint": "Demo only: the file name is recorded, nothing is uploaded."
+      }
+    },
+    "password": {
+      "title": "Update Password",
+      "noItems": "No content",
+      "heading": "Change login password",
+      "old": "Old Password",
+      "new": "New Password",
+      "confirm": "Confirm New Password",
+      "rule": "At least 8 characters, including letters and digits.",
+      "submit": "Submit"
+    },
+    "prefs": {
+      "title": "Preferences",
+      "noItems": "No settings",
+      "group": { "privacy": "Privacy", "community": "Community", "marketing": "Marketing" },
+      "item": { "ghost": "Enable Ghost Mode", "hideStats": "Hide all your statistics", "hideGames": "Hide all your games", "hideProfile": "Hide your profile information", "excludeRain": "Exclude From Rain", "email": "Receive Email Marketing" },
+      "hint": "Changes take effect within 30 seconds.",
+      "gdesc": { "privacy": "Control what other players can see about you and your statistics." },
+      "desc": { "ghost": "When on, other players cannot see your online status.", "hideStats": "Hide all statistics on your profile page.", "hideGames": "Hide your game history on your profile page.", "hideProfile": "Hide profile details other than your nickname.", "excludeRain": "Do not receive rain rewards while taking part in rain events.", "email": "Receive in-site marketing emails and promotion notices." }
+    },
+    "chip": {
+      "title": "Chip & Currency",
+      "heading": "Current chips & bonus currency",
+      "noItems": "No currencies available",
+      "current": "Current currency",
+      "note": "Game chips use this currency by default; promotion rewards are paid in the bonus currency.",
+      "reset": "Reset To {c}"
+    },
+    "avatar": {
+      "title": "Edit Avatar",
+      "heading": "Default Avatar",
+      "noItems": "No avatars available",
+      "noItemsHint": "Check back later"
+    },
+    "sessions": {
+      "title": "Sessions",
+      "noItems": "No sessions",
+      "end": "No More Data",
+      "tab": { "all": "All", "active": "Active", "inactive": "Inactive" },
+      "status": { "current": "Current", "removed": "Removed" },
+      "justNow": "Just now"
+    },
+    "blacklist": {
+      "title": "Ignored Users",
+      "noItems": "No data yet!",
+      "remove": "Remove",
+      "removed": "Removed from ignored users"
+    },
+    "bets": {
+      "title": "Bets",
+      "tab": { "casino": "Casino", "sports": "Sports" },
+      "from": "From",
+      "to": "To",
+      "side": ["Account", "Bets", "Notifications", "KYC", "Sessions", "Preferences"]
+    },
+    "notify": { "title": "Notifications", "noItems": "No notifications" },
+    "wallet": {
+      "title": { "deposit": "Deposit", "withdraw": "Withdraw", "records": "Records" },
+      "noMethods": "No payment methods available", "noMethodsHint": "Please check back later", "emptyRecords": "No records",
+      "tab": { "deposit": "Deposit", "withdraw": "Withdraw" },
+      "records": "Records",
+      "currency": "Currency",
+      "network": "Network",
+      "amount": "Amount",
+      "amountPh": "Enter amount",
+      "address": "Withdrawal address",
+      "addressPh": "Enter withdrawal address",
+      "bonusNone": "No deposit bonus selected",
+      "bonusPick": "Pick a bonus for extra rewards",
+      "bonusTier": "Deposit #{n}: +{pct}%",
+      "bonusMinN": "Min deposit MYR {min} · Turnover x{x}",
+      "bonusTitle": "Deposit Bonus",
+      "bonusFtd": "1st deposit +50%",
+      "bonusMin": "Minimum deposit MYR 10.00",
+      "bonusMore": "3 more",
+      "submit": { "deposit": "Confirm Deposit", "withdraw": "Confirm Withdraw" },
+      "submitting": "Submitting…",
+      "resultOk": "Submitted, pending processing",
+      "resultBad": "Submission failed, please try again",
+      "kind": { "deposit": "Deposit", "withdraw": "Withdraw" },
+      "status": { "success": "Success", "pending": "Pending", "failed": "Failed" }
+    },
+    "depositSubmit": {
+      "title": "Submit Deposit",
+      "step1": "Step 1: choose currency and network",
+      "step2": "Step 2: receiving details",
+      "step3": "Step 3: transfer details",
+      "tip": "Transfer on the selected network. Check Records once it arrives.",
+      "qr": "QR code (placeholder)",
+      "addrHint": "The receiving address is issued by the backend (placeholder, not connected)",
+      "amount": "Amount",
+      "txid": "Transaction Hash",
+      "payer": "Payer Name",
+      "remark": "Remark (optional)",
+      "submit": "Submit"
+    }
+  }
+}
